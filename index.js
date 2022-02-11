@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 const express =require('express')
 const registeredUser = require('./models/user')
 const cors = require('cors')
@@ -13,7 +13,7 @@ const app = express()
 app.use(cors({origin:"*"}))
 app.use(express.json())
 
-mongoose.connect(`mongodb+srv://mayur3301:3301@cluster0.b24rp.mongodb.net/MERNDB?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.b24rp.mongodb.net/${process.env.CLUSTER}?retryWrites=true&w=majority`)
 
 
 
