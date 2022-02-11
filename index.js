@@ -10,7 +10,7 @@ const mongoose = require('mongoose')
 
 const app = express()
 
-app.use(cors({origin:"*"}))
+app.use(cors({origin:"*",}))
 app.use(express.json())
 
 mongoose.connect(`mongodb+srv://mayur3301:3301@cluster0.b24rp.mongodb.net/MERNDB?retryWrites=true&w=majority`)
